@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5426a8">
+  <meta name="description" content="HEXXA MAM is a learning community focused on knowledge, personal growth, useful skills and everyday learning. Learn something new and grow every day.">
+  <title>HEXXA MAM | Learn • Grow • Evolve</title>
+  <style>
+    :root {
+      --bg: #5426a8;
+      --bg-deep: #35136f;
+      --accent: #e7d8ff;
+      --white: #fff;
+      --muted: #e8ddf7;
+      --glass: rgba(34, 12, 75, .24);
+      --line: rgba(255,255,255,.18);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--white);
+      background: var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      overflow-x: hidden;
+    }
+    .page {
+      width: min(100%, 470px);
+      position: relative;
+      isolation: isolate;
+      animation: rise .7s ease both;
+    }
+    .orb {
+      position: fixed;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(211, 183, 255, .13);
+      filter: blur(2px);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .orb.one { top: -100px; right: -90px; }
+    .orb.two { bottom: -120px; left: -100px; width: 320px; height: 320px; }
+    .topline {
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 18px;
+    }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.10);
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: #f4edff;
+      font-size: 10px; font-weight: 800; letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #b8ffcf; box-shadow: 0 0 12px #b8ffcf; }
+.hero {
+      text-align: center;
+      padding: 30px 23px 24px;
+      border: 1px solid var(--line);
+      border-radius: 27px;
+      background: linear-gradient(155deg, rgba(255,255,255,.13), rgba(255,255,255,.045));
+      box-shadow: 0 24px 70px rgba(22, 5, 52, .24);
+      backdrop-filter: blur(10px);
+    }
+h1 {
+      margin: 0;
+      font-size: clamp(25px, 7vw, 34px);
+      line-height: 1.08;
+      letter-spacing: .4px;
+      font-weight: 950;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 12px auto 0;
+      max-width: 310px;
+    }
+    .tags {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 7px;
+      margin: 19px 0 22px;
+    }
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      color: #f2eaff;
+      background: rgba(37, 11, 79, .16);
+      font-size: 10px; font-weight: 700;
+    }
+    .cta {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%;
+      min-height: 56px;
+      border-radius: 15px;
+      background: #fff;
+      color: #421b83;
+      text-decoration: none;
+      font-size: 14px; font-weight: 900; letter-spacing: .55px;
+      box-shadow: 0 10px 24px rgba(25, 5, 55, .2);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(25,5,55,.28); }
+    .cta:active { transform: scale(.985); }
+    .telegram-icon { width: 19px; height: 19px; fill: currentColor; }
+    .under-cta { margin: 12px 0 0; color: #e8dcf8; font-size: 10px; }
+    .disclaimer {
+      margin-top: 15px;
+      padding: 17px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--glass);
+    }
+    .disclaimer h2 {
+      margin: 0 0 7px;
+      font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase;
+    }
+    .disclaimer p {
+      margin: 0;
+      color: #eee5fa;
+      font-size: 11px;
+      line-height: 1.65;
+    }
+    footer { text-align: center; padding: 20px 8px 0; }
+    .managed { color: #e2d3f6; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; }
+    .agency { margin-top: 5px; font-size: 15px; font-weight: 850; letter-spacing: .25px; }
+    .copyright { margin-top: 8px; color: rgba(255,255,255,.64); font-size: 9px; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 380px) {
+      body { padding: 14px; }
+.hero { padding: 25px 17px 21px; }
+}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1830606521420333');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1830606521420333&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="orb one"></div><div class="orb two"></div>
+  <main class="page">
+    <div class="topline">
+      <div class="status"><span class="dot"></span> LEARNING COMMUNITY</div>
+    </div>
+
+<section class="hero" aria-labelledby="channel-name">
+      <h1 id="channel-name">HEXXA MAM</h1>
+      <p class="sub">A space to learn something new, build useful knowledge and grow a little every day.</p>
+
+      <div class="tags" aria-label="Community topics">
+        <span class="tag">Learn Something New</span>
+        <span class="tag">Build Your Knowledge</span>
+        <span class="tag">Grow Every Day</span>
+      </div>
+
+      <a class="cta" href="https://t.me/+dhRwjSUml0gxNTc1" target="_blank" rel="noopener noreferrer">
+        <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 4.2 18.5 20c-.25 1.12-.9 1.4-1.82.87l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.02.5l.36-5.12 9.32-8.42c.4-.36-.09-.56-.62-.2L5.74 13.5.77 11.95c-1.08-.34-1.1-1.08.23-1.6L20.44 2.8c.9-.33 1.69.22 1.36 1.4Z"/></svg>
+        JOIN NOW
+      </a>
+      <p class="under-cta">Join the HEXXA MAM community and keep learning</p>
+    </section>
+
+    <section class="disclaimer" aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">Important Disclaimer</h2>
+      <p>HEXXA MAM is a general learning and educational community. Content may include informational resources, ideas and discussions intended to support curiosity, knowledge-building and personal growth. Information is shared for general educational purposes only and should not be treated as professional, legal, medical, financial or other specialist advice. Always verify important information and consult a qualified professional when making decisions that require expert guidance. Learning outcomes vary from person to person; no specific result is promised or guaranteed.</p>
+    </section>
+
+    <footer>
+      <div class="managed">Managed by</div>
+      <div class="agency">Growth By Mannat</div>
+      <div class="copyright">© 2026 HEXXA MAM. All rights reserved.</div>
+    </footer>
+  </main>
+</body>
+</html>
